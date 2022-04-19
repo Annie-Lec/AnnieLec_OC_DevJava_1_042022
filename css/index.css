@@ -1,0 +1,121 @@
+/* DEFINITION DES VARIABLES */
+:root {
+  /* Color palette */
+  --violetOpenclassRoom: #6b52e6;
+  --textSurligne: black;
+  --footerFond: #203966;
+  --footerIcone: #3366cc;
+  --whiteWhite: #ffffff;
+  --whiteUnPeuMoins: #dbd8e6;
+  --surlignage: #ffc107;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  /*text-align: center;*/
+}
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.4em;
+}
+p {
+  font-size: 1.1em;
+}
+
+.headerMain {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+
+  background-color: var(--violetOpenclassRoom);
+  color: var(--whiteWhite);
+}
+
+.surligneJaune {
+  background-color: var(--surlignage);
+  color: black;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.headerText {
+  text-align: center;
+  padding-top: 50px;
+}
+.headerText h1 {
+  margin-bottom: 10px;
+}
+.headerText p {
+  margin-top: 30px;
+  color: var(--whiteUnPeuMoins);
+}
+/* .headerText span {
+  padding-right: 5px;
+  padding-left: 5px;
+} */
+
+.headerPhoto {
+  text-align: left;
+}
+
+.sectionMain {
+  margin: 50px 10px;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  width: 100%;
+}
+
+.sectionIcone {
+  zoom: 1.5;
+  justify-self: center;
+}
+.sectionText {
+  margin-right: 10px;
+}
+.compet {
+  margin-left: 50px;
+}
+
+.footerMain {
+  padding-left: 60px;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  background-color: var(--footerFond);
+  color: var(--whiteUnPeuMoins);
+}
+.footerMain h2 {
+  font-size: 2em;
+}
+.footerMain p {
+  font-size: 1.2em;
+}
+h3 {
+  margin-top: 5px;
+}
+
+#icones {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 9fr; */
+  width: 100%;
+}
+
+.reseauSoc {
+  /*les colonnes 1 et 3 auront cette mise en page : hauteur fixée de l'image*/
+  width: 13vh;
+  height: 60px;
+  /*l'image couvre l'espace (zoom) demandé avec height et width : ne se déforme pas*/
+  object-fit: contain;
+  align-items: center;
+  margin: 1px;
+}
