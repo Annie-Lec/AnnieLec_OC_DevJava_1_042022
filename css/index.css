@@ -2,32 +2,44 @@
 :root {
   /* Color palette */
   --violetOpenclassRoom: #6b52e6;
-  --textSurligne: black;
+  --textSurligne: #203966;
   --footerFond: #203966;
   --footerIcone: #3366cc;
   --whiteWhite: #ffffff;
   --whiteUnPeuMoins: #dbd8e6;
-  --surlignage: #ffc107;
+  --surlignage: #86eca5;
 }
+
+/* Police externe */
+@font-face {
+  font-family: 'Raleway';
+  src: url('../font/Raleway-Medium.ttf');
+}
+
 
 *,
 ::after,
-::before {
+::before
+ {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  /*text-align: center;*/
+ /* Utilisation de la police externe par défaut */
+  font-family: 'Raleway', Sans-serif;
+  color:var(--textSurligne);
+  /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", */
+    /* "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
 }
 h1 {
   font-size: 2.5em;
+  color: var(--whiteWhite);
 }
 h2 {
   font-size: 2em;
 }
 h3 {
   font-size: 1.4em;
+  margin-top: 5px;
 }
 p {
   font-size: 1.1em;
@@ -37,14 +49,13 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
-
   background-color: var(--violetOpenclassRoom);
   color: var(--whiteWhite);
 }
 
 .surligneJaune {
   background-color: var(--surlignage);
-  color: black;
+  color: var(--textSurligne);
   padding-right: 5px;
   padding-left: 5px;
 }
@@ -60,13 +71,10 @@ p {
   margin-top: 30px;
   color: var(--whiteUnPeuMoins);
 }
-/* .headerText span {
-  padding-right: 5px;
-  padding-left: 5px;
-} */
+
 
 .headerPhoto {
-  text-align: left;
+  text-align: center;
 }
 
 .sectionMain {
@@ -76,13 +84,22 @@ p {
   width: 100%;
 }
 
-.sectionIcone {
-  zoom: 1.5;
-  justify-self: center;
+.sectionIcone{
+  display: flex; 
+  /*alignement horizontal*/
+  justify-content: center;
+  /*alignement vertical*/
+  align-items: center;
 }
+.sectionIcone img{
+  zoom: 0.5;
+}
+
 .sectionText {
   margin-right: 10px;
+  width: 95%;
 }
+
 .compet {
   margin-left: 50px;
 }
@@ -96,22 +113,18 @@ p {
 }
 .footerMain h2 {
   font-size: 2em;
+  color: var(--whiteUnPeuMoins);
 }
 .footerMain p {
   font-size: 1.2em;
-}
-h3 {
-  margin-top: 5px;
+  color: var(--whiteUnPeuMoins);
 }
 
 #icones {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 9fr; */
   width: 100%;
 }
 
 .reseauSoc {
-  /*les colonnes 1 et 3 auront cette mise en page : hauteur fixée de l'image*/
   width: 13vh;
   height: 60px;
   /*l'image couvre l'espace (zoom) demandé avec height et width : ne se déforme pas*/
@@ -119,3 +132,41 @@ h3 {
   align-items: center;
   margin: 1px;
 }
+
+
+ /* Le CSS pour les smartphones *//* Le CSS pour les smartphones *//* Le CSS pour les smartphones *//* Le CSS pour les smartphones *//* Le CSS pour les smartphones */
+ /* *********************************************************************************************** */
+ /* *********************************************************************************************** */
+ /* *********************************************************************************************** */
+ @media (max-width: 767px) {
+    
+  .headerMain {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sectionMain {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .sectionText {
+    margin-right: 5px;
+    margin-left: 5px;
+    width: 95%;
+  }
+
+  .footerMain {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .sectionIcone img{
+    margin-top: 30px;
+    zoom: 0.3;
+  }
+  
+ }
